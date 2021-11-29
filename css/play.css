@@ -1,0 +1,11 @@
+body{
+    margin: 0;
+}
+.c1{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/floor.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,49 @@
+
+.container{
+  padding: 0;
+  margin: 0;
+  
+}
+.title{
+  text-align: center;
+  margin-top: -430px;
+  font-size: 100px;
+  color: black;
+  margin-left: 50px;
+}
+.mainCharacter{
+  margin-left: 60px;
+  margin-top: 50px;
+}
+ul{
+  text-align: center;
+  text-decoration: none;
+  list-style-position: inside;
+}
+li{
+  display: inline-block;
+  font-size: 32px;
+  margin: 100px 66px;
+}
+a{
+  text-decoration: none;
+  color:black;
+}
+a:hover{
+  text-decoration: none;
+  color:blue;
+}
+.clock-div{
+  float: right;
+  margin-top: -300px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
+  
+}
+
+.developer{
+  
+  margin-left: 55px;
+}

@@ -1,0 +1,30 @@
+.container{
+  margin-left: 30px;
+}
+.title{
+  font-size: 40px;
+  font-family: 'SBAggroB';
+  color: green;
+}
+.li1{
+  font-size: 25px;
+  font-family: 'SBAggroL';
+  color:rgb(7, 7, 163);
+}
+.li2{
+  font-size: 30px;
+  font-family: 'SBAggroB';
+  color:rgb(7, 7, 163);
+}
+.li3{
+  color: rgb(7, 7, 163);
+  font-family: 'SBAggroL';
+}
+li{
+  list-style-type: none;
+}
+hr{
+  width: 600px;
+  margin-right: 10000px;
+  
+}

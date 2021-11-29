@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <title>Play</title>
+        <meta charset="UTF-8" /> 
+        <style>
+            body
+            {
+                overflow:hidden;
+                margin:0;
+            }
+            
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/play.css" type="text/css">
+        <script src="js/play.js"></script>    
+    </head>
+    
+    <!-- onload = 웹페이지 동작 시 바로 실행  -->
+    <body onload="Init()" onkeydown="keydown()" onkeyup="keyup()">  
+        <h1>Score: <span id="score" class="score"></span></h1>
+        <canvas id="canvas-view" width="1500" height="600"></canvas>  <!-- view용 canvas-->
+    </body>
+    
+    
+</html>
