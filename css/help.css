@@ -1,30 +1,35 @@
-.container{
-  margin-left: 30px;
+body{
+  padding: 0;
+  margin: 0;
 }
 .title{
-  font-size: 40px;
+  text-align: center;
+  font-size: 90px;
   font-family: 'SBAggroB';
-  color: green;
+  color: black;
+  margin-top: 60px;
 }
-.li1{
-  font-size: 25px;
-  font-family: 'SBAggroL';
-  color:rgb(7, 7, 163);
-}
-.li2{
-  font-size: 30px;
-  font-family: 'SBAggroB';
-  color:rgb(7, 7, 163);
-}
-.li3{
-  color: rgb(7, 7, 163);
-  font-family: 'SBAggroL';
-}
-li{
+h2{
+  text-align: center;
   list-style-type: none;
+  font-family: 'SBAggroB';
+  font-size: 50px;
 }
 hr{
   width: 600px;
   margin-right: 10000px;
   
+}
+
+.describe{
+  margin-top: 30px;
+}
+
+a{
+  text-decoration: none;
+  color:red;
+}
+a:hover{
+  text-decoration: none;
+  color:blue;
 }

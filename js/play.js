@@ -19,8 +19,8 @@ let screenHeight = 600;
 let screenWidth = 1500;
 let shapes = {};
 let shapeIndex = 0;
-let fallSpeed = 1;
-let shapeGenerateSpeed = 500;
+let fallSpeed = 2;
+let shapeGenerateSpeed = 520;
 let score = 0;
 
 function Init(){
@@ -99,7 +99,7 @@ function Shape(posX, width, height) {
 }
 
 // 캐릭터 
-let character = new Character(screenWidth/2, 90, 90);
+let character = new Character(screenWidth/2, 100, 100);
 
 // 캐릭터
 function Character(posX, width, height) {
@@ -146,17 +146,18 @@ function Character(posX, width, height) {
 
 // 게임 끝남
 function newGame() {
-    location.href = "score.html"
-    character = new Character(screenWidth/2, 80, 80);
-    shapes = {};
+    location.href = "score.html";
+    // character = new Character(screenWidth/2, 80, 80);
+    // shapes = {};
     score = 0;
 }
 
 
 function shapeGenerate(){
-    new Shape(Math.random() * screenWidth, 70, 70);
+    new Shape(Math.random() * screenWidth, 80, 80);
     score++;
     document.getElementById('score').textContent = score;
+    localStorage.setItem('score', score);
 }
 
 function Updater() {

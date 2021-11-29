@@ -6,14 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/score.css">
+    <link rel="stylesheet" href="css/play.css">
 </head>
 <body>
     <div class="container">
         <div><img class = "scoreCharacter" src="images/scoreCharacter.png" /></div>
 
-            <div class="score">10000점</div>
+        <div id = "score" class="score">GAME OVER</div>
+       
+        <div id = "restart" class="restart"><a href="play.html">다시시작</a></div>
         
     </div>
     </div>
+    <!-- <script >
+        temp = location.href.split("?");
+        data = temp[1].split(":");
+        score_play = data[0];
+        document.getElementById("player_score").value = Character.score;
+        score = data[0];
+        let d = document.getElementById("player_score").value = score;
+
+    </script> -->
 </body>
 </html>
