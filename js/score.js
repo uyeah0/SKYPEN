@@ -3,3 +3,4 @@ if(localStorage.getItem('score')){
 }
 
 document.getElementById('score').textContent = score;
+

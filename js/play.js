@@ -16,11 +16,11 @@ shape.src = "images/hamburger.png";
 
 
 let screenHeight = 600;
-let screenWidth = 1500;
+let screenWidth = 1600;
 let shapes = {};
 let shapeIndex = 0;
-let fallSpeed = 2;
-let shapeGenerateSpeed = 520;
+let fallSpeed = 1;
+let shapeGenerateSpeed = 200;
 let score = 0;
 
 function Init(){
@@ -59,7 +59,6 @@ function keyup(){
     character.Velocity.X = 0;
 }
 
-// 하늘에서 떨어지는 것들 모양
 function Shape(posX, width, height) {
     this.Width = width;
     this.Height = height;
@@ -73,19 +72,16 @@ function Shape(posX, width, height) {
     shapes[shapeIndex] = this;
     shapeIndex++
 
-    // 충돌 확인
     this.checkCollisions = function() {
       if(this.Position.Y >= screenHeight){
         delete shapes[this.Index];
       }
     }
 
-    // 캐릭터 위치 업데이트
     this.updatePosition = function() {
         this.Position.Y += this.Velocity;
     }
 
-    // 캐릭터 업데이트 될 때마다 그리기
     this.Draw = function() {
         context.drawImage(shape, this.Position.X, this.Position.Y, this.Width, this.Height);
         //context.drawImage(imgBg, 0, 0, 1200, 590);
@@ -98,10 +94,8 @@ function Shape(posX, width, height) {
     }
 }
 
-// 캐릭터 
-let character = new Character(screenWidth/2, 100, 100);
+var character = new Character(screenWidth/2, 80, 80);
 
-// 캐릭터
 function Character(posX, width, height) {
     this.Width = width
     this.Height = height
@@ -119,8 +113,7 @@ function Character(posX, width, height) {
           }
         }
 
-        // 만약 캐릭터와 아이템이 닿았을 시
-        let i = 0;
+        var i = 0;
         for (i in shapes){
             if(collision(this, shapes[i])){
               newGame();
@@ -144,20 +137,18 @@ function Character(posX, width, height) {
     }
 }
 
-// 게임 끝남
 function newGame() {
     location.href = "score.html";
-    // character = new Character(screenWidth/2, 80, 80);
-    // shapes = {};
+    //character = new Character(screenWidth/2, 80, 80);
+    //shapes = {};
     score = 0;
 }
 
 
 function shapeGenerate(){
-    new Shape(Math.random() * screenWidth, 80, 80);
-    score++;
+    new Shape(Math.random() * screenWidth, 70, 70);
+    score++
     document.getElementById('score').textContent = score;
-    localStorage.setItem('score', score);
 }
 
 function Updater() {
