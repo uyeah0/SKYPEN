@@ -94,7 +94,8 @@ function Shape(posX, width, height) {
     }
 }
 
-var character = new Character(screenWidth/2, 80, 80);
+
+let character = new Character(screenWidth/2, 80, 80);
 
 function Character(posX, width, height) {
     this.Width = width
@@ -113,7 +114,7 @@ function Character(posX, width, height) {
           }
         }
 
-        var i = 0;
+        let i = 0;
         for (i in shapes){
             if(collision(this, shapes[i])){
               newGame();
@@ -139,21 +140,19 @@ function Character(posX, width, height) {
 
 function newGame() {
     location.href = "score.html";
-    //character = new Character(screenWidth/2, 80, 80);
-    //shapes = {};
     score = 0;
 }
 
 
 function shapeGenerate(){
     new Shape(Math.random() * screenWidth, 70, 70);
-    score++
+    score++;
     document.getElementById('score').textContent = score;
 }
 
 function Updater() {
     context.clearRect(0, 0, screenWidth, screenHeight);
-    var i = 0;
+    let i = 0;
     for(i in shapes){
       shapes[i].update();
     }
